@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Section</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        /* Custom rotate animation */
+        .hover-rotate {
+            transition: transform 0.6s ease-in-out;
+        }
+        .hover-rotate:hover {
+            transform: rotate(360deg);
+        }
+
+        /* Diagonal split background with blue and gray */
+        body {
+            background: linear-gradient(135deg, #1e3a8a 50%, #e5e7eb 50%);
+        }
+
+        /* Ensure images are properly aligned and fit within the boxes */
+        .service-box img {
+            width: 64px; /* Adjust size for all icons */
+            height: 64px;
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Main Assignment Section -->
+<div id="assignment" class="p-10">
+    <!-- Section Title aligned to the left -->
+    <h2 class="text-left text-white text-3xl font-bold mb-8">Our Services</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+        
+        <!-- Emergency Plumbing Services -->
+        <div class="hover-rotate service-box bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <!-- Emergency Plumbing Image -->
+                <img src="th.jpeg" alt="Emergency Plumbing" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Emergency Plumbing Services</h3>
+            <p class="text-gray-600 mb-4">Our plumbers are ready to go 24/7 for emergencies, including nights, weekends, and holidays.</p>
+            <a href="#" class="text-blue-500 font-semibold">Explore this service ></a>
+        </div>
+        
+        <!-- Plumbing and Drains -->
+        <div class="hover-rotate service-box bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <!-- Plumbing and Drains Image -->
+                <img src="th (2).jpeg" alt="Plumbing and Drains" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Plumbing and Drains</h3>
+            <p class="text-gray-600 mb-4">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+            <a href="#" class="text-blue-500 font-semibold">Explore this service ></a>
+        </div>
+        
+        <!-- Water Damage -->
+        <div class="hover-rotate service-box bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <!-- Water Damage Image -->
+                <img src="th (1).jpeg" alt="Water Damage" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Water Damage</h3>
+            <p class="text-gray-600 mb-4">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+            <a href="#" class="text-blue-500 font-semibold">Explore this service ></a>
+        </div>
+        
+        <!-- Water Heaters -->
+        <div class="hover-rotate service-box bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <!-- Water Heaters Image -->
+                <img src="th (3).jpeg" alt="Water Heaters" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2">Water Heaters</h3>
+            <p class="text-gray-600 mb-4">Trust our team for repair and replacement of gas, electric, and tankless water heaters.</p>
+            <a href="#" class="text-blue-500 font-semibold">Explore this service ></a>
+        </div>
+        
+    </div>
+</div>
+
+<!-- Optional JS script for additional animation triggers -->
+<script>
+    document.querySelectorAll('.service-box').forEach((box) => {
+        box.addEventListener('mouseenter', () => {
+            box.classList.add('animate__animated', 'animate__rotateIn');
+        });
+        box.addEventListener('mouseleave', () => {
+            box.classList.remove('animate__animated', 'animate__rotateIn');
+        });
+    });
+</script>
+
+</body>
+</html>
